@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa79eda756faa229933073a485b429a1",
+    "content-hash": "15dd077608800d5c3dd44454f11831f3",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2373,6 +2373,119 @@
             "time": "2025-01-23T05:11:06+00:00"
         },
         {
+            "name": "fleetbase/fleetops-api",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nayasaff/fleetops-api.git",
+                "reference": "5adbe20cd39469c07f1410ca5ba571f091d8682e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nayasaff/fleetops-api/zipball/5adbe20cd39469c07f1410ca5ba571f091d8682e",
+                "reference": "5adbe20cd39469c07f1410ca5ba571f091d8682e",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/laravel-dompdf": "^2.0",
+                "brick/geo": "0.7.2",
+                "cknow/laravel-money": "^7.1",
+                "fleetbase/core-api": "*",
+                "geocoder-php/google-maps-places-provider": "^1.4",
+                "giggsey/libphonenumber-for-php": "^8.13",
+                "league/geotools": "^1.1.0",
+                "milon/barcode": "^10.0",
+                "php": "^8.0",
+                "php-http/guzzle7-adapter": "^1.0",
+                "psr/http-factory-implementation": "*",
+                "toin0u/geocoder-laravel": "^4.4",
+                "webit/eval-math": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.34.1",
+                "nunomaduro/collision": "^7.0",
+                "pestphp/pest": "^2.33.2",
+                "phpstan/phpstan": "^1.10.38",
+                "symfony/var-dumper": "^5.4.29"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fleetbase\\FleetOps\\Providers\\FleetOpsServiceProvider",
+                        "Fleetbase\\FleetOps\\Providers\\EventServiceProvider"
+                    ]
+                },
+                "fleetbase/fleetops-api": {
+                    "excludes": [
+                        "addon",
+                        "app",
+                        "assets",
+                        "config",
+                        "tests",
+                        "vendor"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fleetbase\\FleetOps\\": "server/src/",
+                    "Fleetbase\\FleetOps\\Seeders\\": "server/seeders/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Fleetbase\\Tests\\": "server/tests/"
+                }
+            },
+            "scripts": {
+                "lint": [
+                    "php-cs-fixer fix -v"
+                ],
+                "test:lint": [
+                    "php-cs-fixer fix -v --dry-run"
+                ],
+                "test:types": [
+                    "phpstan analyse --ansi --memory-limit=4G"
+                ],
+                "test:unit": [
+                    "pest --colors=always"
+                ],
+                "test": [
+                    "@test:lint",
+                    "@test:types",
+                    "@test:unit"
+                ]
+            },
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fleetbase Pte Ltd.",
+                    "email": "hello@fleetbase.io"
+                },
+                {
+                    "name": "Ronald A. Richardson",
+                    "email": "ron@fleetbase.io"
+                }
+            ],
+            "description": "Fleet & Transport Management Extension for Fleetbase",
+            "keywords": [
+                "delivery management",
+                "fleetbase-extension",
+                "fleetops",
+                "last-mile",
+                "tms"
+            ],
+            "support": {
+                "source": "https://github.com/nayasaff/fleetops-api/tree/main",
+                "issues": "https://github.com/nayasaff/fleetops-api/issues"
+            },
+            "time": "2025-02-02T09:40:56+00:00"
+        },
+        {
             "name": "fleetbase/core-api",
             "version": "1.5.24",
             "source": {
@@ -2471,95 +2584,6 @@
                 "source": "https://github.com/fleetbase/core-api/tree/v1.5.24"
             },
             "time": "2025-01-27T06:14:49+00:00"
-        },
-        {
-            "name": "fleetbase/fleetops-api",
-            "version": "0.5.17",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fleetbase/fleetops.git",
-                "reference": "64e47824a8cb9a7a4a26fb8e1d1f34fcfbde39da"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fleetbase/fleetops/zipball/64e47824a8cb9a7a4a26fb8e1d1f34fcfbde39da",
-                "reference": "64e47824a8cb9a7a4a26fb8e1d1f34fcfbde39da",
-                "shasum": ""
-            },
-            "require": {
-                "barryvdh/laravel-dompdf": "^2.0",
-                "brick/geo": "0.7.2",
-                "cknow/laravel-money": "^7.1",
-                "fleetbase/core-api": "*",
-                "geocoder-php/google-maps-places-provider": "^1.4",
-                "giggsey/libphonenumber-for-php": "^8.13",
-                "league/geotools": "^1.1.0",
-                "milon/barcode": "^10.0",
-                "php": "^8.0",
-                "php-http/guzzle7-adapter": "^1.0",
-                "psr/http-factory-implementation": "*",
-                "toin0u/geocoder-laravel": "^4.4",
-                "webit/eval-math": "^1.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.34.1",
-                "nunomaduro/collision": "^7.0",
-                "pestphp/pest": "^2.33.2",
-                "phpstan/phpstan": "^1.10.38",
-                "symfony/var-dumper": "^5.4.29"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Fleetbase\\FleetOps\\Providers\\FleetOpsServiceProvider",
-                        "Fleetbase\\FleetOps\\Providers\\EventServiceProvider"
-                    ]
-                },
-                "fleetbase/fleetops-api": {
-                    "excludes": [
-                        "addon",
-                        "app",
-                        "assets",
-                        "config",
-                        "tests",
-                        "vendor"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Fleetbase\\FleetOps\\": "server/src/",
-                    "Fleetbase\\FleetOps\\Seeders\\": "server/seeders/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "AGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Fleetbase Pte Ltd.",
-                    "email": "hello@fleetbase.io"
-                },
-                {
-                    "name": "Ronald A. Richardson",
-                    "email": "ron@fleetbase.io"
-                }
-            ],
-            "description": "Fleet & Transport Management Extension for Fleetbase",
-            "keywords": [
-                "delivery management",
-                "fleetbase-extension",
-                "fleetops",
-                "last-mile",
-                "tms"
-            ],
-            "support": {
-                "issues": "https://github.com/fleetbase/fleetops/issues",
-                "source": "https://github.com/fleetbase/fleetops/tree/v0.5.17"
-            },
-            "time": "2025-01-27T06:17:03+00:00"
         },
         {
             "name": "fleetbase/laravel-mysql-spatial",
@@ -18272,12 +18296,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "fleetbase/fleetops-api": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.0"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
