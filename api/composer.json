@@ -43,7 +43,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/nayasaff/fleetops-api.git"
+            "url": "https://github.com/nayasaff/fleetops.git"
         }
     ],
     "autoload": {

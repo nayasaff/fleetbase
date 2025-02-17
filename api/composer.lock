@@ -2377,13 +2377,13 @@
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nayasaff/fleetops-api.git",
-                "reference": "5adbe20cd39469c07f1410ca5ba571f091d8682e"
+                "url": "https://github.com/nayasaff/fleetops.git",
+                "reference": "0fef57bc3e220a6a5b76b1a165ac254453b458c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nayasaff/fleetops-api/zipball/5adbe20cd39469c07f1410ca5ba571f091d8682e",
-                "reference": "5adbe20cd39469c07f1410ca5ba571f091d8682e",
+                "url": "https://api.github.com/repos/nayasaff/fleetops/zipball/5b9e28eb902b282495a3f4359f7710a8cabab0e7",
+                "reference": "0fef57bc3e220a6a5b76b1a165ac254453b458c3",
                 "shasum": ""
             },
             "require": {
@@ -2480,8 +2480,8 @@
                 "tms"
             ],
             "support": {
-                "source": "https://github.com/nayasaff/fleetops-api/tree/main",
-                "issues": "https://github.com/nayasaff/fleetops-api/issues"
+                "source": "https://github.com/nayasaff/fleetops/tree/main",
+                "issues": "https://github.com/nayasaff/fleetops/issues"
             },
             "time": "2025-02-02T09:40:56+00:00"
         },
